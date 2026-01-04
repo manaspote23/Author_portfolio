@@ -9,7 +9,7 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
-          <h1 className="hero-title">Manish Pandey</h1>
+          <h1 className="hero-title">Mahendra Pandey</h1>
           <p className="hero-subtitle">Award-winning writer and storyteller</p>
           <p className="hero-text">
             Welcome to my portfolio. Explore my books, read my blog, 

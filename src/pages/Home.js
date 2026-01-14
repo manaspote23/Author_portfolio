@@ -1,56 +1,75 @@
-import { useNavigate } from 'react-router-dom';
-import './Home.css';
+import { useNavigate } from "react-router-dom";
+import "./Home.css";
 
 function Home() {
-  const navigate = useNavigate(); // For navigation to other pages
+  const navigate = useNavigate();
 
   return (
     <div className="home">
-      {/* Hero Section */}
+
+      {/* ================= HERO ================= */}
       <section className="hero">
-        <div className="container">
-          <h1 className="hero-title">Mahendra Pandey</h1>
-          <p className="hero-subtitle">Award-winning writer and storyteller</p>
-          <p className="hero-text">
-            Welcome to my portfolio. Explore my books, read my blog, 
-            and join me on this creative journey.
+        <div className="hero-content">
+
+          <span className="author-role">
+            Author • Essayist • Storyteller
+          </span>
+
+          <h1 className="author-name">
+            Mahendra Pandey
+          </h1>
+
+          <h2 className="author-tagline">
+            Stories written in quiet voices, meant to stay long after the last page.
+          </h2>
+
+          <p className="author-desc">
+            I write fiction and reflective essays exploring silence, memory,
+            human vulnerability, and the beauty of ordinary lives.
+            My work focuses on the moments people often overlook —
+            the pauses, the thoughts left unsaid, and the emotions beneath them.
           </p>
-          <div className="hero-buttons">
-            {/* Fixed: Use navigate function instead of href */}
-            <button 
-              className="btn" 
-              onClick={() => navigate('/books')}
-            >
-              View Books
+
+          <div className="hero-actions">
+            <button onClick={() => navigate("/books")}>
+              Explore Books
             </button>
-            
-            <button 
-              className="btn btn-secondary"
-              onClick={() => navigate('/contact')}
+
+            <button
+              className="secondary"
+              onClick={() => navigate("/about")}
             >
-              Get in Touch
+              About the Author
             </button>
           </div>
+
         </div>
       </section>
 
-      {/* Books Preview Section (Optional) */}
-      <section id="books-preview" className="books-preview">
-        <div className="container">
-          <h2>Featured Books</h2>
-          <div className="books-grid">
-            {/* Add book previews here */}
-          </div>
+      {/* ================= THEMES ================= */}
+      <section className="themes">
+        <h2>Recurring Themes</h2>
+
+        <div className="themes-grid">
+          <div>Silence & Solitude</div>
+          <div>Memory & Identity</div>
+          <div>Human Vulnerability</div>
+          <div>Ordinary Lives</div>
         </div>
       </section>
 
-      {/* Contact Preview Section (Optional) */}
-      <section id="contact-preview" className="contact-preview">
-        <div className="container">
-          <h2>Let's Connect</h2>
-          {/* Add contact preview here */}
-        </div>
+      {/* ================= CTA ================= */}
+      <section className="cta">
+        <h2>Discover the Stories</h2>
+        <p>
+          Explore my books, essays, and ongoing literary work.
+        </p>
+
+        <button onClick={() => navigate("/books")}>
+          View All Works
+        </button>
       </section>
+
     </div>
   );
 }

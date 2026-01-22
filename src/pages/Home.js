@@ -9,38 +9,48 @@ function Home() {
 
       {/* ================= HERO ================= */}
       <section className="hero">
-        <div className="hero-content">
+        <div className="hero-inner">
 
-          <span className="author-role">
-            Author • Essayist • Storyteller
-          </span>
+          {/* LEFT CONTENT */}
+          <div className="hero-text">
+            <span className="author-role">
+              Author • Essayist • Storyteller
+            </span>
 
-          <h1 className="author-name">
-            Mahendra Pandey
-          </h1>
+            <h1 className="author-name">
+              Mahendra Pandey
+            </h1>
 
-          <h2 className="author-tagline">
-            Stories written in quiet voices, meant to stay long after the last page.
-          </h2>
+            <p className="author-desc">
+              I write fiction and reflective essays exploring silence, memory,
+              human vulnerability, and the beauty of ordinary lives.
+              <br /><br />
+              My stories live in the pauses — the thoughts left unsaid,
+              the emotions that linger long after the last page.
+            </p>
 
-          <p className="author-desc">
-            I write fiction and reflective essays exploring silence, memory,
-            human vulnerability, and the beauty of ordinary lives.
-            My work focuses on the moments people often overlook —
-            the pauses, the thoughts left unsaid, and the emotions beneath them.
-          </p>
+            <div className="hero-actions">
+              <button onClick={() => navigate("/books")}>
+                Explore Books
+              </button>
 
-          <div className="hero-actions">
-            <button onClick={() => navigate("/books")}>
-              Explore Books
-            </button>
+              <button
+                className="secondary"
+                onClick={() => navigate("/about")}
+              >
+                About the Author
+              </button>
+            </div>
+          </div>
 
-            <button
-              className="secondary"
-              onClick={() => navigate("/about")}
-            >
-              About the Author
-            </button>
+          {/* RIGHT IMAGE CARD */}
+          <div className="hero-image">
+            <div className="image-frame">
+              <img
+                src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=800"
+                alt="Author portrait"
+              />
+            </div>
           </div>
 
         </div>

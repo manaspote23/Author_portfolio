@@ -4,15 +4,8 @@
 
 .home {
   font-family: 'Inter', sans-serif;
-  color: #f5f5f5;
-
-  background-image:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url("https://images.unsplash.com/photo-1519681393784-d120267933ba");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  color: #111;
+  background: #e9e9e9;
 }
 
 /* ================= HERO ================= */
@@ -20,98 +13,102 @@
 .hero {
   min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  width: 100%;
+  padding: 80px 60px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
   align-items: center;
 }
 
-.hero-content {
-  max-width: 900px;
-  width: 100%;
-  padding: 0 40px;
-  text-align: center;
-}
-
-/* TEXT */
+/* LEFT TEXT */
 
 .author-role {
+  font-size: 12px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: #d8a39d;
+  color: #777;
 }
 
 .author-name {
   font-family: 'Playfair Display', serif;
-  font-size: 80px;
+  font-size: 72px;
   font-weight: 500;
-  margin: 24px 0;
-  white-space: nowrap;
-  color: #f0c674;  
-}
-
-.author-tagline {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  line-height: 1.5;
-  margin-bottom: 30px;
-  color: white;
+  margin: 25px 0;
 }
 
 .author-desc {
-  max-width: 620px;
-  margin: 0 auto;
+  max-width: 520px;
   line-height: 1.9;
-  color: #dcdcdc;
+  color: #444;
 }
 
-/* ================= HERO ACTIONS (FIXED) ================= */
+/* ACTIONS */
 
 .hero-actions {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
-  justify-content: center;   /* 🔥 THIS FIXES IT */
   gap: 40px;
 }
 
 .hero-actions button {
   background: none;
   border: none;
-  font-size: 15px;
-  color: #ffffff;
-  cursor: pointer;
-  border-bottom: 1px solid #ffffff;
-  padding-bottom: 6px;
+  font-size: 14px;
   letter-spacing: 1px;
+  cursor: pointer;
+  border-bottom: 1px solid #111;
+  padding-bottom: 6px;
   transition: 0.3s;
 }
 
 .hero-actions button:hover {
-  color: #f0c674;
-  border-color: #f0c674;
+  color: #b07a5a;
+  border-color: #b07a5a;
 }
 
 .hero-actions .secondary {
-  color: #bbbbbb;
-  border-color: #bbbbbb;
+  color: #666;
+  border-color: #666;
 }
 
-/* ================= SECTIONS ================= */
+/* ================= IMAGE CARD ================= */
 
-.philosophy,
-.themes,
-.cta {
-  padding: 140px 120px;
+.hero-image {
+  display: flex;
+  justify-content: center;
 }
 
+.image-frame {
+  position: relative;
+  padding: 14px;
+  border: 2px solid #111;
+}
 
+.image-frame img {
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
 
-/* THEMES */
+/* ================= THEMES ================= */
+
+.themes {
+  padding: 120px 100px;
+  background: #e9e9e9;
+}
 
 .themes h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  margin-bottom: 50px;
-  color: #f0c674;
+  font-size: 42px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
@@ -122,67 +119,63 @@
 }
 
 .themes-grid div {
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid #999;
   padding: 40px 30px;
   text-align: center;
-  background: rgba(0,0,0,0.4);
+  background: transparent;
   transition: 0.3s;
 }
 
 .themes-grid div:hover {
-  border-color: #f0c674;
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  border-color: #111;
 }
 
-/* CTA */
+/* ================= CTA ================= */
 
 .cta {
+  padding: 140px 100px;
   text-align: center;
-  
 }
 
 .cta h2 {
   font-family: 'Playfair Display', serif;
   font-size: 44px;
   margin-bottom: 25px;
-  color: #f0c674;
 }
 
 .cta p {
   font-size: 18px;
   margin-bottom: 50px;
-  color: #d6d6d6;
+  color: #444;
 }
 
 .cta button {
   background: none;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #111;
   padding: 14px 48px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .cta button:hover {
-   color: #f0c674;
-  border-color: #f0c674;
+  color: #b07a5a;
+  border-color: #b07a5a;
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
-  .hero-content,
-  .philosophy,
-  .themes,
-  .cta {
-    padding: 90px 40px;
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .author-name {
-    font-size: 56px;
+  .author-desc {
+    margin: 0 auto;
   }
 
-  .author-tagline {
-    font-size: 22px;
+  .hero-actions {
+    justify-content: center;
   }
 }
